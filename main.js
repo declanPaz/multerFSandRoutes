@@ -2,9 +2,6 @@
 
 var fs = require('fs');
 var buf = new Buffer(1024);
-var multer = require('multer');
-
-
 var newString = "this is going to be input";
 
 
@@ -41,6 +38,7 @@ fs.writeFile("fileToBeRead.txt", newString, function(err){
 		}
 	});
 });
+
 
 fs.open("fileToBeRead.txt", "r+", function(err, fd){
 	if(err){
